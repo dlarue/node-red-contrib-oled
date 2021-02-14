@@ -16,6 +16,11 @@
 				type: 'number',
 				require: true
 			},
+			bus: {
+				value: 1,
+				type: 'number',
+				require: true
+			},
 			address: {
 				value: 0x3c,
 				type: 'number',
@@ -32,6 +37,10 @@
 	<div class='form-row'>
 		<label for='node-config-input-name'><i class='fa fa-tag'></i> Name</label>
 		<input type='text' id='node-config-input-name'/>
+	</div>
+	<div class='form-row'>
+		<label for='node-config-input-bus'><i class='fa'></i> Bus</label>
+		<input type='text' id='node-config-input-bus' />
 	</div>
 	<div class='form-row'>
 		<label for='node-config-input-address'><i class='fa'></i> Bus Address</label>

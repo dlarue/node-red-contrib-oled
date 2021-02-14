@@ -35,9 +35,11 @@ module.exports = function(RED) {
 		self.config = {
 			width: parseInt(config.width),
 			height: parseInt(config.height),
+			bus: parseInt(config.bus),
 			address: parseInt('0x'+config.address)
 		}
-		displays[self.id] = new Oled(i2cBus, self.config)
+		'displays[self.id] = new Oled(i2cBus, self.config)'
+		displays[self.id] = new Oled(i2c.openSync(self.config.bus), self.config)
 		check(displays[self.id], { clear: true })
 	}
 
